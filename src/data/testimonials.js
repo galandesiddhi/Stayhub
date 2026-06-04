@@ -1,0 +1,42 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: "Priya Sharma",
+    role: "Software Engineer at The Editorial Institute - Kharadi",
+    quote: "StayHub transformed my Bangalore experience. The community events helped me build an incredible network, and the co-working space is better than most offices I've worked in.",
+    rating: 5,
+    avatar: "PS",
+  },
+  {
+    id: 2,
+    name: "Arjun Mehta",
+    role: "MBA Student, Symbiosis Institute of Business Management, Pune",
+    quote: "As a student, finding quality accommodation was stressful. StayHub made it effortless — meals, laundry, WiFi, everything is just taken care of. I can focus on what matters.",
+    rating: 5,
+    avatar: "AM",
+  },
+  {
+    id: 3,
+    name: "Sarah Chen",
+    role: "Software Engineer at Eclarcs Technologies",
+    quote: "The Premium double sharing room is worth every rupee. Private bathroom, smart TV, and the rooftop views are unreal. It feels like living in a boutique hotel with a built-in friend group.",
+    rating: 5,
+    avatar: "SC",
+  },
+  {
+    id: 4,
+    name: "Rahul Verma",
+    role: "Freelance Developer",
+    quote: "I've lived in 3 co-living spaces before StayHub. None come close. The food is genuinely delicious, the staff is responsive, and the gym is surprisingly well-equipped.",
+    rating: 4,
+    avatar: "RV",
+  },
+  {
+    id: 5,
+    name: "Ananya Iyer",
+    role: "Marketing Manager at Swiggy",
+    quote: "Moving to a new city was daunting until I found StayHub. Within a week, I had friends, a routine, and a place that actually felt like home. Can't recommend it enough!",
+    rating: 5,
+    avatar: "AI",
+  },
+];
