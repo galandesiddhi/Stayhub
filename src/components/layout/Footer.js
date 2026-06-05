@@ -3,10 +3,7 @@ import { siteConfig, navLinks } from "@/data/navigation";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal-darkest text-slate-400 border-t border-white/5">
-      {/* Royal Blue accent line */}
-      <div className="h-1 bg-gradient-to-r from-royal-blue-dark via-royal-blue to-royal-blue-medium" />
-
+    <footer className="bg-charcoal-darkest text-slate-400 border-t border-slate-800">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-6">
 
@@ -16,8 +13,8 @@ export default function Footer() {
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-royal-blue text-white font-black text-lg shadow-lg shadow-royal-blue/30">
                 S
               </span>
-              <span className="font-display text-xl font-bold tracking-tight text-white">
-                Stay<span className="text-royal-blue-light">Hub</span>
+              <span className="font-display text-xl font-normal tracking-tight text-white">
+                Stay<span className="text-royal-blue">Hub</span>
               </span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs font-light">
@@ -44,7 +41,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 hover:bg-royal-blue border border-white/8 hover:border-royal-blue flex items-center justify-center text-slate-400 hover:text-white transition-all duration-200"
+                  className="w-9 h-9 rounded-full bg-white/5 hover:bg-white flex items-center justify-center text-slate-400 hover:text-charcoal-darkest transition-all duration-300"
                   aria-label={social.label}
                 >
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">

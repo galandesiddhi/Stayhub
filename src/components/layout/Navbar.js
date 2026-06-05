@@ -23,8 +23,8 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-xl border-b border-slate-100 shadow-sm"
-          : "bg-white border-b border-transparent"
+          ? "bg-white/95 backdrop-blur-md border-b border-slate-100"
+          : "bg-white/50 backdrop-blur-sm border-b border-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -35,7 +35,7 @@ export default function Navbar() {
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-royal-blue text-white font-extrabold text-xl shadow-lg shadow-royal-blue/25 group-hover:scale-105 transition-all duration-300">
                 S
               </span>
-              <span className="font-display text-2xl font-black tracking-tight text-charcoal-darkest">
+              <span className="font-display text-2xl font-normal tracking-tight text-charcoal-darkest">
                 Stay<span className="text-royal-blue">Hub</span>
               </span>
             </Link>
@@ -57,7 +57,7 @@ export default function Navbar() {
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 h-0.5 w-full bg-royal-blue rounded-full animate-fadeIn" />
+                    <span className="absolute bottom-0 left-0 h-0.5 w-full bg-royal-blue" />
                   )}
                 </Link>
               );
@@ -68,7 +68,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-xl bg-royal-blue px-6 py-3 text-xs font-bold tracking-widest uppercase text-white shadow-lg shadow-royal-blue/20 hover:bg-royal-blue-dark hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+              className="inline-flex items-center justify-center rounded-full bg-charcoal-darkest px-6 py-3 text-xs font-bold tracking-widest uppercase text-white hover:bg-royal-blue hover:-translate-y-0.5 transition-all duration-300 cursor-pointer shadow-sm"
             >
               Book a Tour
             </Link>
@@ -115,8 +115,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block rounded-xl px-4 py-3 text-sm font-bold tracking-wide transition-colors ${
                   isActive
-                    ? "bg-royal-blue-faint text-royal-blue border border-royal-blue-lightest"
-                    : "text-charcoal-muted hover:bg-slate-50 hover:text-charcoal-darkest"
+                    ? "text-royal-blue border-b border-royal-blue"
+                    : "text-charcoal-muted hover:text-charcoal-darkest"
                 }`}
               >
                 {link.label}
@@ -127,7 +127,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center rounded-xl bg-royal-blue px-4 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-royal-blue/20 hover:bg-royal-blue-dark transition-colors cursor-pointer"
+              className="block w-full text-center rounded-full bg-charcoal-darkest px-4 py-4 text-sm font-bold uppercase tracking-wider text-white hover:bg-royal-blue transition-colors cursor-pointer shadow-sm"
             >
               Schedule Tour
             </Link>

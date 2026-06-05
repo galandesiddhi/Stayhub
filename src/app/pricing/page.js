@@ -37,35 +37,32 @@ export default function PricingPage() {
     <div className="bg-background min-h-screen">
 
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="relative bg-charcoal-darkest py-28 overflow-hidden">
-        <div className="absolute inset-0 hero-gradient" />
-        <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-royal-blue/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute inset-0 dot-grid opacity-10" />
+      <section className="relative bg-white py-28 overflow-hidden">
         <div className="relative mx-auto max-w-4xl px-4 text-center z-10">
           <motion.div variants={stagger} initial="hidden" animate="show" className="flex flex-col items-center gap-5">
             <motion.span variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-royal-blue-light/30 bg-royal-blue/10 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-royal-blue-lighter">
               💰 Membership Plans
             </motion.span>
-            <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-              Simple, Transparent <span className="gradient-text">Pricing</span>
+            <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-charcoal-darkest tracking-tight">
+              Simple, Transparent <span className="text-royal-blue">Pricing</span>
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-lg text-slate-300 font-light leading-relaxed max-w-xl">
+            <motion.p variants={fadeUp} className="text-lg text-charcoal-muted font-light leading-relaxed max-w-xl">
               All-inclusive pricing. No hidden fees. No broker charges. Just pick your plan and move in.
             </motion.p>
 
             {/* Billing toggle */}
             <motion.div variants={fadeUp} className="flex items-center gap-4 mt-2">
-              <span className={`text-sm font-semibold transition-colors ${!isYearly ? "text-white" : "text-slate-400"}`}>Monthly</span>
+              <span className={`text-sm font-semibold transition-colors ${!isYearly ? "text-charcoal-darkest" : "text-charcoal-muted"}`}>Monthly</span>
               <button
                 onClick={() => setIsYearly(!isYearly)}
-                className={`relative w-14 h-7 rounded-full transition-colors duration-300 cursor-pointer focus:outline-none ${isYearly ? "bg-royal-blue" : "bg-white/20"}`}
+                className={`relative w-14 h-7 rounded-full transition-colors duration-300 cursor-pointer focus:outline-none ${isYearly ? "bg-royal-blue" : "bg-slate-200"}`}
                 role="switch" aria-checked={isYearly}
               >
                 <span className={`absolute top-0.5 left-0.5 w-6 h-6 rounded-full bg-white shadow transition-transform duration-300 ${isYearly ? "translate-x-7" : "translate-x-0"}`} />
               </button>
-              <span className={`text-sm font-semibold transition-colors flex items-center gap-2 ${isYearly ? "text-white" : "text-slate-400"}`}>
+              <span className={`text-sm font-semibold transition-colors flex items-center gap-2 ${isYearly ? "text-charcoal-darkest" : "text-charcoal-muted"}`}>
                 Yearly
-                <span className="bg-accent-gold/20 text-accent-gold text-[10px] font-bold px-2.5 py-1 rounded-full border border-accent-gold/30">
+                <span className="bg-green-50 text-green-700 text-[10px] font-bold px-2.5 py-1 rounded-full border border-green-200">
                   Save 15%
                 </span>
               </span>
@@ -89,8 +86,8 @@ export default function PricingPage() {
                   transition={{ duration: 0.6, delay: idx * 0.12 }}
                   className={`relative flex flex-col rounded-3xl border transition-all duration-300 ${
                     plan.popular
-                      ? "bg-royal-blue border-royal-blue shadow-2xl shadow-royal-blue/25 md:scale-105 md:z-10"
-                      : "bg-white border-slate-100 shadow-premium hover:shadow-xl hover:-translate-y-1"
+                      ? "bg-charcoal-darkest border-charcoal-darkest shadow-md md:scale-105 md:z-10"
+                      : "bg-white border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1"
                   }`}
                 >
                   {plan.popular && (
@@ -158,10 +155,10 @@ export default function PricingPage() {
 
                     <Link
                       href="/contact"
-                      className={`w-full inline-flex items-center justify-center rounded-xl py-3.5 text-sm font-bold tracking-wide transition-all duration-300 ${
+                      className={`w-full inline-flex items-center justify-center rounded-full py-3.5 text-sm font-bold tracking-wide transition-all duration-300 ${
                         plan.popular
-                          ? "bg-white text-royal-blue hover:bg-royal-blue-faint"
-                          : "bg-royal-blue text-white hover:bg-royal-blue-dark shadow-lg shadow-royal-blue/20"
+                          ? "bg-white text-charcoal-darkest hover:bg-surface"
+                          : "bg-charcoal-darkest text-white hover:bg-royal-blue shadow-sm"
                       }`}
                     >
                       {plan.cta}
@@ -185,7 +182,7 @@ export default function PricingPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-royal-blue">Compare Plans</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-charcoal-darkest mt-2">Plan Comparison</h2>
             </div>
-            <div className="overflow-x-auto rounded-2xl border border-slate-100 shadow-premium">
+            <div className="overflow-x-auto rounded-2xl border border-slate-100 shadow-sm">
               <table className="w-full text-sm border-collapse">
                 <thead>
                   <tr className="bg-surface border-b border-slate-100">
@@ -210,8 +207,7 @@ export default function PricingPage() {
       </section>
 
       {/* ── Food Included ─────────────────────────────── */}
-      <section className="py-20 bg-charcoal-darkest relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-royal-blue/10 rounded-full blur-[120px] pointer-events-none" />
+      <section className="py-20 bg-surface relative overflow-hidden">
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left */}
@@ -223,15 +219,15 @@ export default function PricingPage() {
               <span className="inline-flex items-center gap-2 rounded-full border border-accent-gold/30 bg-accent-gold/10 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-accent-gold w-fit">
                 🍽️ Chef Dining Included
               </span>
-              <h2 className="font-display text-4xl font-bold text-white leading-tight">
+              <h2 className="font-display text-4xl font-normal text-charcoal-darkest leading-tight">
                 Nutritious Food,<br />
-                <span className="gradient-text-gold">Cooked Daily.</span>
+                <span className="text-royal-blue">Cooked Daily.</span>
               </h2>
-              <p className="text-slate-300 leading-relaxed font-light">
+              <p className="text-charcoal-muted leading-relaxed font-light">
                 All memberships include chef-cooked meals prepared in our centralized, hygienic hub kitchens. No grocery shopping, cooking, or cleaning required.
               </p>
               {["Weekly rotating menus", "Vegan, Vegetarian & Jain diets", "FSSAI safety-approved ingredients", "Professional chefs on staff"].map((item) => (
-                <div key={item} className="flex items-center gap-3 text-sm text-slate-200">
+                <div key={item} className="flex items-center gap-3 text-sm text-charcoal-darkest">
                   <span className="w-5 h-5 rounded-full bg-accent-gold/20 border border-accent-gold/30 flex items-center justify-center text-accent-gold text-xs font-bold shrink-0">✓</span>
                   {item}
                 </div>
@@ -243,7 +239,7 @@ export default function PricingPage() {
               initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.1 }}
             >
-              <div className="flex border-b border-white/10 mb-6">
+              <div className="flex border-b border-slate-200 mb-6">
                 {foodMenu.map((meal) => (
                   <button
                     key={meal.id}
@@ -268,18 +264,18 @@ export default function PricingPage() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -12 }}
                     transition={{ duration: 0.25 }}
-                    className="glass-dark rounded-2xl p-6"
+                    className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100"
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-lg font-bold text-white">{meal.meal}</h3>
-                      <span className="text-xs font-bold text-accent-gold bg-accent-gold/10 border border-accent-gold/20 px-3 py-1 rounded-full">
+                      <h3 className="text-lg font-bold text-charcoal-darkest">{meal.meal}</h3>
+                      <span className="text-xs font-bold text-royal-blue bg-royal-blue-faint border border-royal-blue/20 px-3 py-1 rounded-full">
                         {meal.time}
                       </span>
                     </div>
-                    <p className="text-slate-400 text-sm italic leading-relaxed mb-5">"{meal.description}"</p>
+                    <p className="text-charcoal-muted text-sm italic leading-relaxed mb-5">"{meal.description}"</p>
                     <div className="grid grid-cols-2 gap-2">
                       {meal.items.map((item) => (
-                        <span key={item} className="text-xs text-slate-300 bg-white/5 border border-white/8 rounded-xl px-3 py-2 font-medium">
+                        <span key={item} className="text-xs text-charcoal-darkest bg-surface border border-slate-100 rounded-xl px-3 py-2 font-medium">
                           {item}
                         </span>
                       ))}

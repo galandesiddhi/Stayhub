@@ -29,10 +29,7 @@ export default function AmenitiesPage() {
     <div className="bg-background min-h-screen">
 
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="relative bg-charcoal-darkest py-28 overflow-hidden">
-        <div className="absolute inset-0 hero-gradient" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-royal-blue/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute inset-0 dot-grid opacity-10" />
+      <section className="relative bg-white py-28 overflow-hidden">
         <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center z-10">
           <motion.div
             variants={stagger} initial="hidden" animate="show"
@@ -41,11 +38,11 @@ export default function AmenitiesPage() {
             <motion.span variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-royal-blue-light/30 bg-royal-blue/10 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-royal-blue-lighter">
               🛠️ World-Class Infrastructure
             </motion.span>
-            <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+            <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-charcoal-darkest tracking-tight leading-tight">
               Everything You Need<br />
-              <span className="gradient-text">Under One Roof</span>
+              <span className="text-royal-blue">Under One Roof</span>
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-lg text-slate-300 font-light leading-relaxed max-w-2xl">
+            <motion.p variants={fadeUp} className="text-lg text-charcoal-muted font-light leading-relaxed max-w-2xl">
               StayHub spaces are built with commercial-grade networks, ergonomic furniture, and premium amenities — so you can focus on what matters.
             </motion.p>
           </motion.div>
@@ -104,7 +101,7 @@ export default function AmenitiesPage() {
                   exit={{ opacity: 0, scale: 0.92 }}
                   transition={{ duration: 0.25 }}
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className="group flex flex-col p-7 bg-white rounded-2xl border border-slate-100 shadow-premium hover:border-royal-blue-lighter hover:shadow-lg transition-all duration-300 cursor-default"
+                  className="group flex flex-col p-7 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-royal-blue/30 transition-all duration-300 cursor-default"
                 >
                   <div className="w-14 h-14 rounded-xl bg-royal-blue-faint flex items-center justify-center text-3xl mb-5 group-hover:-translate-y-1 transition-transform duration-300">
                     {amenity.icon}
@@ -132,29 +129,28 @@ export default function AmenitiesPage() {
         <motion.div
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.6 }}
-          className="mx-auto max-w-4xl bg-charcoal-darkest rounded-3xl p-10 md:p-14 text-center relative overflow-hidden"
+          className="mx-auto max-w-4xl bg-surface rounded-3xl p-10 md:p-14 text-center relative overflow-hidden border border-slate-100 shadow-sm"
         >
-          <div className="absolute top-0 right-0 w-72 h-72 bg-royal-blue/10 rounded-full blur-[80px] pointer-events-none" />
           <div className="relative z-10">
-            <span className="inline-flex items-center gap-2 rounded-full border border-royal-blue-light/30 bg-royal-blue/10 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-royal-blue-lighter mb-6">
+            <span className="inline-flex items-center gap-2 rounded-full border border-royal-blue-light/30 bg-royal-blue/10 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-royal-blue mb-6">
               Premium Membership
             </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-normal text-charcoal-darkest mb-4">
               Experience These Amenities First-Hand
             </h2>
-            <p className="text-slate-300 mb-8 font-light max-w-xl mx-auto">
+            <p className="text-charcoal-muted mb-8 font-light max-w-xl mx-auto">
               Schedule a free tour and see the spaces, try the gym, review bedroom options, and meet current residents.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center h-13 rounded-xl bg-royal-blue px-8 py-3.5 text-sm font-bold text-white hover:bg-royal-blue-dark transition-all shadow-lg shadow-royal-blue/30"
+                className="inline-flex items-center justify-center h-13 rounded-full bg-charcoal-darkest px-8 py-3.5 text-sm font-bold text-white hover:bg-royal-blue transition-all shadow-sm"
               >
                 Book a Free Tour
               </Link>
               <Link
                 href="/pricing"
-                className="inline-flex items-center justify-center h-13 rounded-xl border border-white/20 px-8 py-3.5 text-sm font-bold text-white hover:bg-white/10 transition-all"
+                className="inline-flex items-center justify-center h-13 rounded-full border border-slate-200 text-charcoal-darkest px-8 py-3.5 text-sm font-bold hover:border-royal-blue transition-all"
               >
                 View Pricing →
               </Link>

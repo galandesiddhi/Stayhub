@@ -67,19 +67,16 @@ export default function GalleryPage() {
     <div className="bg-background min-h-screen">
 
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="relative bg-charcoal-darkest py-28 overflow-hidden">
-        <div className="absolute inset-0 hero-gradient" />
-        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-royal-blue/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute inset-0 dot-grid opacity-10" />
+      <section className="relative bg-white py-28 overflow-hidden">
         <div className="relative mx-auto max-w-4xl px-4 text-center z-10">
           <motion.div variants={stagger} initial="hidden" animate="show" className="flex flex-col items-center gap-5">
             <motion.span variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-royal-blue-light/30 bg-royal-blue/10 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-royal-blue-lighter">
               📸 Curated Living Spaces
             </motion.span>
-            <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-              Explore the <span className="gradient-text">StayHub Aesthetic</span>
+            <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-charcoal-darkest tracking-tight">
+              Explore the <span className="text-royal-blue">StayHub Aesthetic</span>
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-lg text-slate-300 font-light max-w-xl leading-relaxed">
+            <motion.p variants={fadeUp} className="text-lg text-charcoal-muted font-light max-w-xl leading-relaxed">
               Beautiful spaces lead to beautiful work. Browse real photos of our bedrooms, co-working suites, kitchens, and rooftop lounges.
             </motion.p>
           </motion.div>
@@ -182,7 +179,7 @@ export default function GalleryPage() {
           <p className="text-charcoal-light mb-8">Photos don't do justice. Come walk through our spaces.</p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center h-13 rounded-xl bg-royal-blue px-8 py-3.5 text-sm font-bold text-white hover:bg-royal-blue-dark transition-all shadow-lg shadow-royal-blue/25"
+            className="inline-flex items-center justify-center h-13 rounded-full bg-charcoal-darkest px-8 py-3.5 text-sm font-bold text-white hover:bg-royal-blue transition-all shadow-sm"
           >
             Schedule a Visit →
           </Link>

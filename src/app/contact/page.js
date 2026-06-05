@@ -141,7 +141,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full inline-flex items-center justify-center rounded-xl bg-royal-blue px-6 py-4 text-sm font-bold text-white shadow-lg shadow-royal-blue/25 hover:bg-royal-blue-dark hover:-translate-y-0.5 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
+        className="w-full inline-flex items-center justify-center rounded-full bg-charcoal-darkest px-6 py-4 text-sm font-bold text-white shadow-sm hover:bg-royal-blue hover:-translate-y-0.5 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
       >
         {status === "submitting" ? (
           <span className="flex items-center gap-3">
@@ -193,19 +193,16 @@ export default function ContactPage() {
     <div className="bg-surface min-h-screen">
 
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="relative bg-charcoal-darkest py-28 overflow-hidden">
-        <div className="absolute inset-0 hero-gradient" />
-        <div className="absolute top-1/2 right-1/3 w-[500px] h-[500px] bg-royal-blue/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute inset-0 dot-grid opacity-10" />
+      <section className="relative bg-white py-28 overflow-hidden">
         <div className="relative mx-auto max-w-4xl px-4 text-center z-10">
           <motion.div variants={stagger} initial="hidden" animate="show" className="flex flex-col items-center gap-5">
             <motion.span variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-royal-blue-light/30 bg-royal-blue/10 px-4 py-1.5 text-xs font-bold tracking-widest uppercase text-royal-blue-lighter">
               📞 Tour Registration
             </motion.span>
-            <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-              Schedule a Visit at <span className="gradient-text">StayHub</span>
+            <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-charcoal-darkest tracking-tight">
+              Schedule a Visit at <span className="text-royal-blue">StayHub</span>
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-lg text-slate-300 font-light leading-relaxed max-w-xl">
+            <motion.p variants={fadeUp} className="text-lg text-charcoal-muted font-light leading-relaxed max-w-xl">
               See the workspaces, try the high-speed fiber, review bedroom options, and meet current residents before signing anything.
             </motion.p>
           </motion.div>
@@ -223,7 +220,7 @@ export default function ContactPage() {
               transition={{ duration: 0.7 }}
               className="lg:col-span-7"
             >
-              <div className="bg-white rounded-3xl border border-slate-100 shadow-premium p-8 md:p-10">
+              <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-8 md:p-10">
                 <h2 className="text-xl font-bold text-charcoal-darkest mb-6">
                   Schedule an In-Person Tour
                 </h2>
@@ -240,7 +237,7 @@ export default function ContactPage() {
               className="lg:col-span-5 flex flex-col gap-6"
             >
               {/* Info cards */}
-              <div className="bg-white rounded-3xl border border-slate-100 shadow-premium p-6">
+              <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-6">
                 <h2 className="text-base font-bold text-charcoal-darkest mb-5">Contact Directory</h2>
                 <div className="flex flex-col gap-3">
                   {infoCards.map((card) => (
@@ -265,14 +262,7 @@ export default function ContactPage() {
               </div>
 
               {/* Map placeholder */}
-              <div className="relative rounded-3xl overflow-hidden bg-charcoal-darkest border border-charcoal-dark h-64 shadow-xl">
-                {/* Grid background */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:24px_24px] opacity-30" />
-                {/* Road lines */}
-                <div className="absolute top-1/3 left-0 right-0 h-px bg-royal-blue/30 rotate-12" />
-                <div className="absolute top-2/3 left-0 right-0 h-px bg-royal-blue/20 -rotate-6" />
-                <div className="absolute top-0 bottom-0 left-1/3 w-px bg-royal-blue/20 rotate-6" />
-                <div className="absolute top-0 bottom-0 left-2/3 w-px bg-royal-blue/15 -rotate-12" />
+              <div className="relative rounded-3xl overflow-hidden bg-surface border border-slate-200 h-64 shadow-sm">
                 {/* Hub pins */}
                 {[
                   { top: "35%", left: "28%", label: "StayHub K-Mngla" },
@@ -280,18 +270,17 @@ export default function ContactPage() {
                   { top: "22%", left: "52%", label: "StayHub HSR" },
                 ].map((pin) => (
                   <div key={pin.label} className="absolute flex flex-col items-center" style={{ top: pin.top, left: pin.left }}>
-                    <div className="w-5 h-5 rounded-full bg-royal-blue border-2 border-white shadow-lg flex items-center justify-center cursor-pointer hover:scale-125 transition-transform">
-                      <span className="w-2 h-2 rounded-full bg-white animate-ping absolute" />
+                    <div className="w-4 h-4 rounded-full bg-royal-blue shadow-sm flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
                       <span className="w-1.5 h-1.5 rounded-full bg-white" />
                     </div>
-                    <span className="mt-1.5 bg-charcoal-dark text-[8px] font-bold tracking-widest text-slate-300 uppercase px-2 py-0.5 rounded border border-charcoal-medium whitespace-nowrap">
+                    <span className="mt-1.5 text-[9px] font-medium tracking-widest text-charcoal-muted uppercase px-2 py-0.5 rounded whitespace-nowrap">
                       {pin.label}
                     </span>
                   </div>
                 ))}
                 {/* Center label */}
                 <div className="absolute bottom-4 left-0 right-0 text-center">
-                  <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">📍 Multiple Locations · Bangalore</span>
+                  <span className="text-[10px] text-charcoal-light uppercase tracking-widest font-bold">📍 Multiple Locations · Bangalore</span>
                 </div>
               </div>
             </motion.div>
