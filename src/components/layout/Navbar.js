@@ -31,10 +31,6 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-3 group">
-              <span className="flex h-11 w-15 items-center justify-center rounded-xl bg-charcoal-darkest
-               text-white font-extrabold text-xl shadow-lg shadow-royal-blue/25 group-hover:scale-105 transition-all duration-300">
-                SOL.
-              </span>
               <span className="font-display text-2xl font-normal tracking-tight text-charcoal-darkest">
                 SOL<span className="text-royal-blue">Stay</span>
               </span>

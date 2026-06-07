@@ -10,10 +10,10 @@ export const siteConfig = {
   name: "SOL Stay Co-Living",
   tagline: "Live Together. Live Better.",
   description: "Premium co-living spaces designed for modern professionals and students.",
-  phone: "+91 98765 43210",
-  email: "hello@solstay.co",
+  phone: "+91 78875 64747",
+  email: "hello@solstay.in",
   address: "Near Ajeenkya D.Y. Patil University, Lohegaon, Pune- 411047",
-  whatsapp: "https://wa.me/919876543210",
+  whatsapp: "https://wa.me/917887564747",
   socials: {
     instagram: "https://instagram.com/solstay",
     twitter: "https://twitter.com/solstay",
