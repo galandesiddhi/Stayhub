@@ -200,7 +200,7 @@ export default function ContactPage() {
               📞 Tour Registration
             </motion.span>
             <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-charcoal-darkest tracking-tight">
-              Schedule a Visit at <span className="text-royal-blue">StayHub</span>
+              Schedule a Visit at <span className="text-royal-blue">SOL Stay</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-charcoal-muted font-light leading-relaxed max-w-xl">
               See the workspaces, try the high-speed fiber, review bedroom options, and meet current residents before signing anything.
@@ -265,9 +265,9 @@ export default function ContactPage() {
               <div className="relative rounded-3xl overflow-hidden bg-surface border border-slate-200 h-64 shadow-sm">
                 {/* Hub pins */}
                 {[
-                  { top: "35%", left: "28%", label: "StayHub K-Mngla" },
-                  { top: "58%", left: "68%", label: "StayHub Indranagr" },
-                  { top: "22%", left: "52%", label: "StayHub HSR" },
+                  { top: "35%", left: "28%", label: "SOL Stay K-Mngla" },
+                  { top: "58%", left: "68%", label: "SOL Stay Indranagr" },
+                  { top: "22%", left: "52%", label: "SOL Stay HSR" },
                 ].map((pin) => (
                   <div key={pin.label} className="absolute flex flex-col items-center" style={{ top: pin.top, left: pin.left }}>
                     <div className="w-4 h-4 rounded-full bg-royal-blue shadow-sm flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">

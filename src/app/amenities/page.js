@@ -43,7 +43,7 @@ export default function AmenitiesPage() {
               <span className="text-royal-blue">Under One Roof</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-charcoal-muted font-light leading-relaxed max-w-2xl">
-              StayHub spaces are built with commercial-grade networks, ergonomic furniture, and premium amenities — so you can focus on what matters.
+              SOL Stay spaces are built with commercial-grade networks, ergonomic furniture, and premium amenities — so you can focus on what matters.
             </motion.p>
           </motion.div>
         </div>

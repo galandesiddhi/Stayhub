@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "About Us | StayHub",
-  description: "Learn about StayHub's mission to redefine co-living for modern professionals, creators, and builders.",
+  title: "About Us | SOL Stay",
+  description: "Learn about SOL Stay's mission to redefine co-living for modern professionals, creators, and builders.",
 };
 
 export default function AboutPage() {
@@ -20,7 +20,7 @@ export default function AboutPage() {
             Redefining Co-Living for <span className="gradient-text">Modern Builders</span>
           </h1>
           <p className="text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed">
-            StayHub was born out of a simple frustration: why does renting a premium living space have to be so difficult, inflexible, and isolated?
+            SOL Stay was born out of a simple frustration: why does renting a premium living space have to be so difficult, inflexible, and isolated?
           </p>
         </div>
 
@@ -29,7 +29,7 @@ export default function AboutPage() {
           <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 animate-fadeIn">
             <Image
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-              alt="Team collaborating at StayHub"
+              alt="Team collaborating at SOL Stay"
               fill
               className="object-cover"
               sizes="(max-w-768px) 100vw, 50vw"
@@ -37,10 +37,10 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col gap-6 animate-fadeIn">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-              The StayHub Story
+              The SOL Stay Story
             </h2>
             <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
-              Founded in 2024, StayHub is a venture-backed premium co-living network designing zero-friction shared living spaces for modern creators, builders, and professionals. 
+              Founded in 2024, SOL Stay is a venture-backed premium co-living network designing zero-friction shared living spaces for modern creators, builders, and professionals. 
             </p>
             <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
               We eliminate the traditional friction of renting—heavy brokerage fees, long lock-in periods, dealing with multiple utility vendors, and poor quality infrastructure. Instead, we offer a seamless membership model where everything from high-speed fiber internet to chef-prepared meals is included.

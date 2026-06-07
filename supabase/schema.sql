@@ -1,4 +1,4 @@
--- Supabase Schema for StayHub Living
+-- Supabase Schema for SOL Stay Living
 
 -- 1. LEADS TABLE
 CREATE TABLE leads (

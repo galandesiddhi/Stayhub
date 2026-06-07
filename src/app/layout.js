@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "StayHub Co-Living | Premium Co-Living Spaces",
+  title: "SOL Stay Co-Living | Premium Co-Living Spaces",
   description:
     "Discover premium co-living spaces designed for modern professionals. Fully furnished rooms, world-class amenities, vibrant community, and meals included — all in one monthly rent.",
   keywords: [
@@ -28,20 +28,20 @@ export const metadata = {
     "furnished rooms",
     "student housing",
     "professional housing",
-    "StayHub",
+    "SOL Stay",
   ],
-  authors: [{ name: "StayHub Co-Living" }],
+  authors: [{ name: "SOL Stay Co-Living" }],
   openGraph: {
-    title: "StayHub Co-Living | Premium Co-Living Spaces",
+    title: "SOL Stay Co-Living | Premium Co-Living Spaces",
     description:
       "Fully furnished co-living spaces with world-class amenities and vibrant community.",
     type: "website",
     locale: "en_US",
-    siteName: "StayHub Co-Living",
+    siteName: "SOL Stay Co-Living",
   },
   twitter: {
     card: "summary_large_image",
-    title: "StayHub Co-Living | Premium Co-Living Spaces",
+    title: "SOL Stay Co-Living | Premium Co-Living Spaces",
     description:
       "Fully furnished co-living spaces with world-class amenities and vibrant community.",
   },

@@ -16,10 +16,10 @@ const fadeUp = {
 };
 
 const locations = [
-  "StayHub Koramangala Premier",
-  "StayHub Indiranagar Club House",
-  "StayHub HSR Residency",
-  "StayHub Whitefield Elite",
+  "SOL Stay Koramangala Premier",
+  "SOL Stay Indiranagar Club House",
+  "SOL Stay HSR Residency",
+  "SOL Stay Whitefield Elite",
 ];
 const getLocation = (id) => locations[id % locations.length];
 
@@ -74,7 +74,7 @@ export default function GalleryPage() {
               📸 Curated Living Spaces
             </motion.span>
             <motion.h1 variants={fadeUp} className="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-charcoal-darkest tracking-tight">
-              Explore the <span className="text-royal-blue">StayHub Aesthetic</span>
+              Explore the <span className="text-royal-blue">SOL Stay Aesthetic</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-charcoal-muted font-light max-w-xl leading-relaxed">
               Beautiful spaces lead to beautiful work. Browse real photos of our bedrooms, co-working suites, kitchens, and rooftop lounges.
