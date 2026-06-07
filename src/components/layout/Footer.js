@@ -10,9 +10,6 @@ export default function Footer() {
           {/* Brand — col span 2 */}
           <div className="flex flex-col gap-5 lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 w-fit">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-royal-blue text-white font-black text-lg shadow-lg shadow-royal-blue/30">
-                S
-              </span>
               <span className="font-display text-xl font-normal tracking-tight text-white">
                 Stay<span className="text-royal-blue">Hub</span>
               </span>

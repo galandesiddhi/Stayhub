@@ -106,7 +106,7 @@ function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor="phone" className={labelClass}>Phone Number</label>
-          <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required placeholder="+91 98765 43210" className={inputClass} />
+          <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required placeholder="+91 78875 64747" className={inputClass} />
         </div>
         <div>
           <label htmlFor="roomType" className={labelClass}>Room Preference</label>
@@ -263,24 +263,19 @@ export default function ContactPage() {
 
               {/* Map placeholder */}
               <div className="relative rounded-3xl overflow-hidden bg-surface border border-slate-200 h-64 shadow-sm">
-                {/* Hub pins */}
-                {[
-                  { top: "35%", left: "28%", label: "SOL Stay K-Mngla" },
-                  { top: "58%", left: "68%", label: "SOL Stay Indranagr" },
-                  { top: "22%", left: "52%", label: "SOL Stay HSR" },
-                ].map((pin) => (
-                  <div key={pin.label} className="absolute flex flex-col items-center" style={{ top: pin.top, left: pin.left }}>
-                    <div className="w-4 h-4 rounded-full bg-royal-blue shadow-sm flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                    </div>
-                    <span className="mt-1.5 text-[9px] font-medium tracking-widest text-charcoal-muted uppercase px-2 py-0.5 rounded whitespace-nowrap">
-                      {pin.label}
-                    </span>
-                  </div>
-                ))}
-                {/* Center label */}
-                <div className="absolute bottom-4 left-0 right-0 text-center">
-                  <span className="text-[10px] text-charcoal-light uppercase tracking-widest font-bold">📍 Multiple Locations · Bangalore</span>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613173278896!2d73.91411931541671!3d18.562253987384868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sPhoenix%20Marketcity%20-%20Viman%20Nagar!5e0!3m2!1sen!2sin!4v1664362516280!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0"
+                ></iframe>
+                {/* Center label overlay */}
+                <div className="absolute bottom-4 left-0 right-0 text-center pointer-events-none">
+                  <span className="text-[10px] text-charcoal-darkest uppercase tracking-widest font-bold bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">📍 Multiple Locations · Pune</span>
                 </div>
               </div>
             </motion.div>
