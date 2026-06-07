@@ -21,22 +21,22 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-slate-100"
-          : "bg-white/50 backdrop-blur-sm border-b border-transparent"
-      }`}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
+        ? "bg-white/95 backdrop-blur-md border-b border-slate-100"
+        : "bg-white/50 backdrop-blur-sm border-b border-transparent"
+        }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-3 group">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-royal-blue text-white font-extrabold text-xl shadow-lg shadow-royal-blue/25 group-hover:scale-105 transition-all duration-300">
-                S
+              <span className="flex h-11 w-15 items-center justify-center rounded-xl bg-charcoal-darkest
+               text-white font-extrabold text-xl shadow-lg shadow-royal-blue/25 group-hover:scale-105 transition-all duration-300">
+                SOL.
               </span>
               <span className="font-display text-2xl font-normal tracking-tight text-charcoal-darkest">
-                Stay<span className="text-royal-blue">Hub</span>
+                SOL<span className="text-royal-blue">Stay</span>
               </span>
             </Link>
           </div>
@@ -49,11 +49,10 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`text-sm font-semibold tracking-wide transition-colors relative py-1.5 ${
-                    isActive
-                      ? "text-royal-blue"
-                      : "text-charcoal-muted hover:text-charcoal-darkest"
-                  }`}
+                  className={`text-sm font-semibold tracking-wide transition-colors relative py-1.5 ${isActive
+                    ? "text-royal-blue"
+                    : "text-charcoal-muted hover:text-charcoal-darkest"
+                    }`}
                 >
                   {link.label}
                   {isActive && (
@@ -100,9 +99,8 @@ export default function Navbar() {
 
       {/* Mobile Nav Drawer */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-[400px] opacity-100 border-b border-secondary-slate/10 bg-white" : "max-h-0 opacity-0 pointer-events-none"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[400px] opacity-100 border-b border-secondary-slate/10 bg-white" : "max-h-0 opacity-0 pointer-events-none"
+          }`}
         id="mobile-menu"
       >
         <div className="space-y-1.5 px-4 py-4">
@@ -113,11 +111,10 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`block rounded-xl px-4 py-3 text-sm font-bold tracking-wide transition-colors ${
-                  isActive
-                    ? "text-royal-blue border-b border-royal-blue"
-                    : "text-charcoal-muted hover:text-charcoal-darkest"
-                }`}
+                className={`block rounded-xl px-4 py-3 text-sm font-bold tracking-wide transition-colors ${isActive
+                  ? "text-royal-blue border-b border-royal-blue"
+                  : "text-charcoal-muted hover:text-charcoal-darkest"
+                  }`}
               >
                 {link.label}
               </Link>

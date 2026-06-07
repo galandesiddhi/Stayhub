@@ -3,13 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { 
-  LayoutDashboard, 
-  Users, 
-  Building2, 
-  CreditCard, 
-  Wrench, 
-  Menu, 
+import {
+  LayoutDashboard,
+  Users,
+  Building2,
+  CreditCard,
+  Wrench,
+  Menu,
   X,
   LogOut,
   Mailbox
@@ -47,7 +47,7 @@ export default function AdminLayout({ children }) {
     <div className="min-h-screen bg-[#f7f8f9] dark:bg-[#0c0c0c] text-slate-900 dark:text-slate-100 flex selection:bg-indigo-500/30">
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
@@ -55,9 +55,8 @@ export default function AdminLayout({ children }) {
 
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-[#111111] border-r border-slate-200 dark:border-white/10 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-auto ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-[#111111] border-r border-slate-200 dark:border-white/10 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-auto ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="flex flex-col h-full">
           {/* Logo */}
@@ -66,7 +65,7 @@ export default function AdminLayout({ children }) {
               <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold">
                 S
               </div>
-              <span>StayHub <span className="text-slate-500 dark:text-slate-400 font-normal">Admin</span></span>
+              <span>SOL Stay <span className="text-slate-500 dark:text-slate-400 font-normal">Admin</span></span>
             </Link>
           </div>
 
@@ -79,11 +78,10 @@ export default function AdminLayout({ children }) {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
-                    isActive
+                  className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${isActive
                       ? "bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400"
                       : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-slate-100"
-                  }`}
+                    }`}
                 >
                   <Icon className={`w-5 h-5 ${isActive ? "text-indigo-600 dark:text-indigo-400" : "text-slate-400 dark:text-slate-500"}`} />
                   {item.name}
@@ -113,7 +111,7 @@ export default function AdminLayout({ children }) {
             <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold">
               S
             </div>
-            <span>StayHub</span>
+            <span>SOL Stay</span>
           </div>
           <button
             onClick={() => setSidebarOpen(true)}

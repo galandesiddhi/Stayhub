@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Pricing & Plans | StayHub",
+  title: "Pricing & Plans | SOL Stay",
   description: "Transparent, zero-friction pricing for premium co-living spaces. Choose from Starter, Premium, and Executive memberships.",
 };
 

@@ -74,11 +74,10 @@ function FAQItem({ faq, isOpen, onToggle }) {
           {faq.question}
         </span>
         <span
-          className={`shrink-0 w-7 h-7 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
-            isOpen
-              ? "border-royal-blue bg-royal-blue text-white rotate-45"
-              : "border-slate-200 text-charcoal-light"
-          }`}
+          className={`shrink-0 w-7 h-7 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${isOpen
+            ? "border-royal-blue bg-royal-blue text-white rotate-45"
+            : "border-slate-200 text-charcoal-light"
+            }`}
         >
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
@@ -114,7 +113,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background overflow-x-hidden">
 
       {/* ── 1. HERO ─────────────────────────────────── */}
-      <section className="relative min-h-[96vh] flex items-center justify-center bg-white overflow-hidden">
+      <section className="relative min-h-[96vh] flex items-center justify-center bg-charcoal-darkest overflow-hidden">
+        <div className="absolute inset-0 dot-grid opacity-10" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full z-10 py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -134,7 +134,7 @@ export default function Home() {
 
               <motion.h1
                 variants={fadeUp}
-                className="font-display text-5xl sm:text-6xl lg:text-7xl font-normal text-charcoal-darkest leading-[1.05] tracking-tight"
+                className="font-display text-5xl sm:text-6xl lg:text-7xl font-normal text-white leading-[1.05] tracking-tight"
               >
                 Live Together.<br />
                 <span className="text-royal-blue">Live Better.</span>
@@ -168,13 +168,13 @@ export default function Home() {
               <motion.div variants={fadeUp} className="flex items-center gap-4 pt-2">
                 <div className="flex -space-x-2">
                   {["PS", "AM", "SC"].map((init) => (
-                    <div key={init} className="w-8 h-8 rounded-full bg-surface border-2 border-white flex items-center justify-center text-[10px] font-bold text-charcoal-darkest">
+                    <div key={init} className="w-8 h-8 rounded-full bg-royal-blue-dark border-2 border-charcoal-darkest flex items-center justify-center text-[10px] font-bold text-white">
                       {init}
                     </div>
                   ))}
                 </div>
-                <p className="text-sm text-charcoal-muted">
-                  <span className="text-charcoal-darkest font-semibold">500+</span> happy residents across 12 properties
+                <p className="text-sm text-white">
+                  <span className="text-white font-semibold">500+</span> happy residents across 12 properties
                 </p>
               </motion.div>
             </motion.div>
@@ -191,7 +191,7 @@ export default function Home() {
                 <div className="relative w-[420px] h-[500px] rounded-3xl overflow-hidden shadow-2xl animate-float border border-white/10">
                   <Image
                     src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=900&q=80"
-                    alt="Premium co-living room at StayHub"
+                    alt="Premium co-living room at SOL Stay"
                     fill
                     className="object-cover"
                     priority
@@ -304,7 +304,7 @@ export default function Home() {
             >
               <Image
                 src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80"
-                alt="Premium bedroom suite at StayHub"
+                alt="Premium bedroom suite at SOL Stay"
                 fill className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-darkest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
@@ -366,7 +366,7 @@ export default function Home() {
             className="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-3"
           >
             <motion.span variants={fadeUp} className="text-xs font-bold uppercase tracking-widest text-royal-blue">
-              The StayHub Difference
+              The SOL Stay Difference
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-display text-4xl sm:text-5xl font-bold text-charcoal-darkest tracking-tight">
               Everything You Need. Nothing You Don&apos;t.
@@ -388,8 +388,8 @@ export default function Home() {
                 icon: "🤝",
                 title: "Vibrant Community",
                 desc: "Connect with 500+ vetted professionals, students, and creators. Weekly events, networking sessions, and a built-in social life.",
-                color: "bg-royal-blue-faint border-royal-blue-lightest",
-                iconBg: "bg-royal-blue-lightest",
+                color: "bg-white border-slate-100",
+                iconBg: "bg-surface",
               },
               {
                 icon: "🏠",
@@ -424,7 +424,7 @@ export default function Home() {
       </section>
 
       {/* ── 5. AMENITIES TEASER ──────────────────────── */}
-      <section className="py-24 bg-white text-charcoal-darkest relative overflow-hidden">
+      <section className="py-24 bg-charcoal-darkest text-white relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
           <motion.div
             variants={stagger}
@@ -439,7 +439,7 @@ export default function Home() {
             <motion.h2 variants={fadeUp} className="font-display text-4xl sm:text-5xl font-normal tracking-tight">
               More Than Just a Room
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-lg text-charcoal-muted font-light leading-relaxed">
+            <motion.p variants={fadeUp} className="text-lg text-slate-300 font-light leading-relaxed">
               Enterprise-grade infrastructure gives you the focus to build and the space to breathe.
             </motion.p>
           </motion.div>
@@ -456,13 +456,13 @@ export default function Home() {
                 key={amenity.id}
                 variants={fadeUp}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="group flex flex-col p-6 rounded-2xl bg-white border border-slate-100 hover:border-royal-blue/30 shadow-sm transition-all duration-300"
+                className="group flex flex-col p-6 rounded-2xl bg-white/5 border border-white/8 hover:bg-royal-blue/15 hover:border-royal-blue-lighter/30 transition-all duration-300"
               >
                 <div className="text-3xl mb-4 group-hover:-translate-y-1 transition-transform duration-300">
                   {amenity.icon}
                 </div>
-                <h3 className="text-base font-normal text-charcoal-darkest mb-2 font-display">{amenity.title}</h3>
-                <p className="text-xs text-charcoal-muted leading-relaxed">{amenity.description}</p>
+                <h3 className="text-base font-normal text-white mb-2 font-display">{amenity.title}</h3>
+                <p className="text-xs text-slate-300 leading-relaxed">{amenity.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -470,7 +470,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/amenities"
-              className="inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 px-8 py-4 text-sm font-medium text-charcoal-darkest hover:border-royal-blue transition-all duration-300 shadow-sm"
+              className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-8 py-4 text-sm font-bold text-white hover:bg-royal-blue hover:border-royal-blue transition-all duration-300"
             >
               View All Amenities
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -508,11 +508,10 @@ export default function Home() {
               <button
                 key={meal.id}
                 onClick={() => setActiveMealTab(meal.id)}
-                className={`flex-1 pb-4 text-sm font-semibold transition-all border-b-2 cursor-pointer ${
-                  activeMealTab === meal.id
-                    ? "border-royal-blue text-royal-blue"
-                    : "border-transparent text-charcoal-light hover:text-charcoal-dark"
-                }`}
+                className={`flex-1 pb-4 text-sm font-semibold transition-all border-b-2 cursor-pointer ${activeMealTab === meal.id
+                  ? "border-royal-blue text-royal-blue"
+                  : "border-transparent text-charcoal-light hover:text-charcoal-dark"
+                  }`}
               >
                 <span className="text-lg mr-1.5">{meal.icon}</span>
                 {meal.meal}
@@ -603,11 +602,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
-                className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-300 ${
-                  plan.popular
-                    ? "border-royal-blue bg-royal-blue text-white shadow-xl shadow-royal-blue/25 md:scale-105 md:z-10"
-                    : "border-slate-100 bg-white shadow-premium hover:shadow-xl hover:-translate-y-1"
-                }`}
+                className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-300 ${plan.popular
+                  ? "border-charcoal-darkest bg-charcoal-darkest text-white shadow-xl shadow-royal-blue/25 md:scale-105 md:z-10"
+                  : "border-slate-100 bg-white shadow-premium hover:shadow-xl hover:-translate-y-1"
+                  }`}
               >
                 {plan.popular && (
                   <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-accent-gold px-5 py-1.5 text-[10px] font-bold text-charcoal-darkest tracking-widest uppercase shadow-lg">
@@ -645,11 +643,10 @@ export default function Home() {
 
                 <Link
                   href="/contact"
-                  className={`w-full inline-flex items-center justify-center rounded-xl py-3.5 text-sm font-bold tracking-wide transition-all duration-300 ${
-                    plan.popular
-                      ? "bg-white text-royal-blue hover:bg-royal-blue-faint"
-                      : "bg-royal-blue text-white hover:bg-royal-blue-dark shadow-lg shadow-royal-blue/20"
-                  }`}
+                  className={`w-full inline-flex items-center justify-center rounded-xl py-3.5 text-sm font-bold tracking-wide transition-all duration-300 ${plan.popular
+                    ? "bg-white text-charcoal-darkest hover:bg-royal-blue-faint"
+                    : "bg-charcoal-darkest text-white hover:bg-royal-blue shadow-lg shadow-royal-blue/20"
+                    }`}
                 >
                   {plan.cta}
                 </Link>
@@ -743,22 +740,22 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mx-auto max-w-5xl bg-surface border border-slate-100 rounded-[2rem] overflow-hidden relative shadow-sm"
+          className="mx-auto max-w-5xl bg-charcoal-darkest border border-slate-100 rounded-[2rem] overflow-hidden relative shadow-sm"
         >
 
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 p-10 md:p-14">
             <div className="text-center md:text-left">
-              <h2 className="font-display text-3xl md:text-4xl font-normal text-charcoal-darkest mb-3 leading-tight">
+              <h2 className="font-display text-3xl md:text-4xl font-normal text-white mb-3 leading-tight">
                 Ready to Find Your New Home?
               </h2>
               <p className="text-charcoal-muted text-base">
-                Schedule a free tour and experience StayHub living first-hand.
+                Schedule a free tour and experience SOL Stay living first-hand.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <Link
                 href="/contact"
-                className="inline-flex h-13 items-center justify-center rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-royal-blue hover:bg-royal-blue-faint transition-all duration-300 shadow-lg"
+                className="inline-flex h-13 items-center justify-center rounded-xl border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-bold text-white hover:bg-white/10 transition-all duration-300 shadow-lg"
               >
                 Book a Tour
               </Link>

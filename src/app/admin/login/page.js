@@ -47,7 +47,7 @@ export default function AdminLogin() {
               Welcome back
             </h1>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-              Enter your admin credentials to access StayHub
+              Enter your admin credentials to access SOL Stay
             </p>
           </div>
 
@@ -62,7 +62,7 @@ export default function AdminLogin() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all text-slate-900 dark:text-white"
-                placeholder="admin@stayhub.com"
+                placeholder="admin@solstay.com"
               />
             </div>
             
