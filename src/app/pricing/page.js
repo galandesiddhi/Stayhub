@@ -21,6 +21,10 @@ export default function PricingPage() {
   const [activeMeal, setActiveMeal] = useState(1);
   const [openFaq, setOpenFaq] = useState(null);
 
+  const maxDiscountPercent = Math.max(
+    ...pricingPlans.map(p => Math.round(((p.monthlyPrice - p.yearlyPrice) / p.monthlyPrice) * 100))
+  );
+
   const comparisonRows = [
     { label: "Room Type",          starter: "Triple Sharing",       premium: "Double Sharing" },
     { label: "Bathroom",           starter: "Shared",               premium: "Shared (In-suite)" },
@@ -63,7 +67,7 @@ export default function PricingPage() {
               <span className={`text-sm font-semibold transition-colors flex items-center gap-2 ${isYearly ? "text-charcoal-darkest" : "text-charcoal-muted"}`}>
                 Yearly
                 <span className="bg-green-50 text-green-700 text-[10px] font-bold px-2.5 py-1 rounded-full border border-green-200">
-                  Save 15%
+                  Save up to {maxDiscountPercent}%
                 </span>
               </span>
             </motion.div>
@@ -77,7 +81,8 @@ export default function PricingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
             {pricingPlans.map((plan, idx) => {
               const price = isYearly ? plan.yearlyPrice : plan.monthlyPrice;
-              const savings = (plan.monthlyPrice - plan.yearlyPrice) * 12;
+              const savingsAmount = (plan.monthlyPrice - plan.yearlyPrice) * 12;
+              const discountPercent = Math.round(((plan.monthlyPrice - plan.yearlyPrice) / plan.monthlyPrice) * 100);
               return (
                 <motion.div
                   key={plan.id}
@@ -126,7 +131,7 @@ export default function PricingPage() {
                     </AnimatePresence>
                     {isYearly && (
                       <p className={`text-xs font-semibold mb-6 ${plan.popular ? "text-blue-200" : "text-accent-green"}`}>
-                        Save ₹{savings.toLocaleString("en-IN")}/year
+                        Save ₹{savingsAmount.toLocaleString("en-IN")}/year ({discountPercent}%)
                       </p>
                     )}
                     {!isYearly && <div className="mb-6" />}

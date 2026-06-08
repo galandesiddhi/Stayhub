@@ -4,7 +4,7 @@ export const pricingPlans = [
     name: "Hall Sharing",
     description: "Built for focused students & freshers who want premium living without the premium price.",
     monthlyPrice: 12999,
-    yearlyPrice: 11699,
+    yearlyPrice: 12399,
     popular: false,
     features: [
       "Triple Sharing Suite",
@@ -27,7 +27,7 @@ export const pricingPlans = [
     name: "Bedroom double sharing",
     description: "The ultimate lifestyle upgrade for remote workers and young professionals.",
     monthlyPrice: 14999,
-    yearlyPrice: 13499,
+    yearlyPrice: 13999,
     popular: true,
     features: [
       "Double Sharing Suite",

@@ -108,6 +108,10 @@ export default function Home() {
   const [activeMealTab, setActiveMealTab] = useState(1);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
+  const maxDiscountPercent = Math.max(
+    ...pricingPlans.map(p => Math.round(((p.monthlyPrice - p.yearlyPrice) / p.monthlyPrice) * 100))
+  );
+
   const featuredAmenities = amenities.slice(0, 8);
 
   return (
@@ -658,7 +662,7 @@ export default function Home() {
           </div>
 
           <p className="text-center text-sm text-charcoal-light mt-8">
-            💡 Save up to 10% with a 12-month plan.{" "}
+            💡 Save up to {maxDiscountPercent}% with a 12-month plan.{" "}
             <Link href="/pricing" className="text-royal-blue font-semibold hover:underline">
               View full pricing details →
             </Link>
