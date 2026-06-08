@@ -18,32 +18,42 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "SOL Stay Co-Living | Premium Co-Living Spaces",
+  metadataBase: new URL('https://solstay.in'),
+  title: {
+    default: "SOL Stay | Premium Co-Living & Furnished PG in Pune",
+    template: "%s | SOL Stay Co-Living Pune"
+  },
   description:
-    "Discover premium co-living spaces designed for modern professionals. Fully furnished rooms, world-class amenities, vibrant community, and meals included — all in one monthly rent.",
+    "Discover premium co-living spaces and fully furnished PG in Pune for students and working professionals. Locations in Kharadi, Viman Nagar, and Lohegaon. Book a tour today!",
   keywords: [
-    "co-living",
-    "coliving spaces",
-    "shared living",
-    "furnished rooms",
-    "student housing",
-    "professional housing",
+    "PG in Pune",
+    "Boys PG in Pune",
+    "Co-Living in Pune",
+    "Furnished PG in Pune",
+    "PG for Students in Pune",
+    "PG for Working Professionals in Pune",
+    "PG in Kharadi",
+    "Co-Living in Kharadi",
     "SOL Stay",
   ],
   authors: [{ name: "SOL Stay Co-Living" }],
   openGraph: {
-    title: "SOL Stay Co-Living | Premium Co-Living Spaces",
+    title: "SOL Stay | Premium Co-Living & Furnished PG in Pune",
     description:
-      "Fully furnished co-living spaces with world-class amenities and vibrant community.",
+      "Premium co-living spaces and furnished PG for students and working professionals across Pune (Kharadi, Viman Nagar, Lohegaon).",
+    url: 'https://solstay.in',
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     siteName: "SOL Stay Co-Living",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SOL Stay Co-Living | Premium Co-Living Spaces",
+    title: "SOL Stay | Premium Co-Living & Furnished PG in Pune",
     description:
-      "Fully furnished co-living spaces with world-class amenities and vibrant community.",
+      "Premium co-living spaces and furnished PG for students and working professionals across Pune (Kharadi, Viman Nagar, Lohegaon).",
+  },
+  alternates: {
+    canonical: '/',
   },
 };
 

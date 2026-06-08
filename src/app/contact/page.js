@@ -4,6 +4,7 @@ import { useState, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/data/navigation";
 import { createClient } from "@/utils/supabase/client";
+import { LocalBusinessSchema } from "@/components/seo/SchemaMarkup";
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -191,6 +192,7 @@ export default function ContactPage() {
 
   return (
     <div className="bg-surface min-h-screen">
+      <LocalBusinessSchema />
 
       {/* ── Hero ─────────────────────────────────────── */}
       <section className="relative bg-white py-28 overflow-hidden">

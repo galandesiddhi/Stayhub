@@ -10,6 +10,7 @@ import { pricingPlans } from "@/data/pricing";
 import { testimonials } from "@/data/testimonials";
 import { faqItems } from "@/data/faq";
 import { siteConfig } from "@/data/navigation";
+import { LocalBusinessSchema, FAQSchema } from "@/components/seo/SchemaMarkup";
 
 /* ── Animation Variants ─────────────────────────── */
 const stagger = {
@@ -111,6 +112,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-x-hidden">
+      <LocalBusinessSchema />
+      <FAQSchema faqs={faqItems} />
 
       {/* ── 1. HERO ─────────────────────────────────── */}
       <section className="relative min-h-[96vh] flex items-center justify-center bg-charcoal-darkest overflow-hidden">
@@ -136,8 +139,8 @@ export default function Home() {
                 variants={fadeUp}
                 className="font-display text-5xl sm:text-6xl lg:text-7xl font-normal text-white leading-[1.05] tracking-tight"
               >
-                Live Together.<br />
-                <span className="text-royal-blue">Live Better.</span>
+                Premium Co-Living<br />
+                <span className="text-royal-blue">& PG in Pune.</span>
               </motion.h1>
 
               <motion.p

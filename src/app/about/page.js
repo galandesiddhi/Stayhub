@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { BreadcrumbSchema } from "@/components/seo/SchemaMarkup";
 
 export const metadata = {
   title: "About Us | SOL Stay",
@@ -9,6 +10,10 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="bg-slate-50 dark:bg-slate-950 min-h-screen py-20">
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://solstay.in" },
+        { name: "About", url: "https://solstay.in/about" }
+      ]} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
