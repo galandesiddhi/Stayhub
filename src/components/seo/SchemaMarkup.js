@@ -6,7 +6,7 @@ export const LocalBusinessSchema = () => {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": siteConfig.name,
-    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80",
+    "image": "https://solstay.in/bedroom%201.jpg",
     "@id": "https://solstay.in",
     "url": "https://solstay.in",
     "telephone": siteConfig.phone,

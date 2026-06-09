@@ -33,7 +33,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 animate-fadeIn">
             <Image
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+              src="/common area.png"
               alt="Team collaborating at SOL Stay"
               fill
               className="object-cover"

@@ -197,7 +197,7 @@ export default function Home() {
                 {/* Main image card */}
                 <div className="relative w-[420px] h-[500px] rounded-3xl overflow-hidden shadow-2xl animate-float border border-white/10">
                   <Image
-                    src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=900&q=80"
+                    src="/bedroom 1.jpg"
                     alt="Premium co-living room at SOL Stay"
                     fill
                     className="object-cover"
@@ -310,7 +310,7 @@ export default function Home() {
               className="md:col-span-8 relative rounded-3xl overflow-hidden shadow-xl group h-80 md:h-full"
             >
               <Image
-                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80"
+                src="/private suite.webp"
                 alt="Premium bedroom suite at SOL Stay"
                 fill className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -333,7 +333,7 @@ export default function Home() {
                 className="relative rounded-3xl overflow-hidden shadow-xl group h-full"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+                  src="/common area.png"
                   alt="Co-working space"
                   fill className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -348,7 +348,7 @@ export default function Home() {
                 className="relative rounded-3xl overflow-hidden shadow-xl group h-full"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=800&q=80"
+                  src="/balcony.png"
                   alt="Community rooftop events"
                   fill className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
